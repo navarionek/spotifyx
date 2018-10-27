@@ -23,22 +23,22 @@ class LocalDataSynchronizer
     }
 
     fun onSync() {
-        authenticator.connect()
-            .flatMapObservable(this::subscribeToPlayer)
-            .map(this::mapEntity)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe ({
-
-            }, {
-
-            })
+//        authenticator.connect()
+//            .flatMapObservable(this::subscribeToPlayer)
+//            .map(this::mapEntity)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe ({
+//
+//            }, {
+//
+//            })
     }
 
-    private fun mapEntity(playerState: PlayerState): SpotifyPlayerState {
-        playerState.track.imageUri
-//        playerState.
-    }
+//    private fun mapEntity(playerState: PlayerState): SpotifyPlayerState {
+//        playerState.track.imageUri
+////        playerState.
+//    }
 
     private fun subscribeToPlayer(remote: SpotifyAppRemote): Observable<PlayerState> {
         return Observable.fromPublisher { subscriber ->

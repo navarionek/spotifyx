@@ -7,8 +7,13 @@ import dagger.Provides
 @Module
 class AuthModule {
 
-    @Provides
-    fun provideAuthenticator(context: Context): Authenticator {
-        return Authenticator(context)
+    @Module
+    companion object {
+
+        @JvmStatic
+        @Provides
+        fun provideAuthenticator(context: Context): Authenticator {
+            return Authenticator(context)
+        }
     }
 }
