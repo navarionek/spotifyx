@@ -36,7 +36,8 @@ class LocalDataSynchronizer
     }
 
     private fun mapEntity(playerState: PlayerState): SpotifyPlayerState {
-        playerState.
+        playerState.track.imageUri
+//        playerState.
     }
 
     private fun subscribeToPlayer(remote: SpotifyAppRemote): Observable<PlayerState> {
