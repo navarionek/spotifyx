@@ -8,7 +8,9 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        INSTANCE = DaggerAppComponent.builder().build()
+        INSTANCE = DaggerAppComponent.builder()
+            .application(this)
+            .build()
     }
 
     companion object {
